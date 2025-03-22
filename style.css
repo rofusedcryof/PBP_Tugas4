@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a1f44;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    width: 350px;
+    margin: 50px auto;
+    /* background-color: #123881; */
+    background-color: rgba(18, 56, 129, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); */
+    box-shadow: 0px 4px 20px rgba(0, 0, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+h1 {
+    color: gold;
+}
+
+input, select, button {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: orange;
+}
+
+.hidden {
+    display: none;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /*membuat gambarnya menjadi lingkaran biar elegan*/
+    border: 3px solid rgba(0, 0, 125, 0.01);
+    box-shadow: 0 0 10px box-shadow(0, 0, 125, 0.01);
+    backdrop-filter: blur(20px);
+    margin-top: 10px;
+    animation: floatAnimation 3s infinite ease-in-out;
+}
+
+header {
+    text-align: center;
+    /* background: navy; */
+    background: rgba(0, 0, 125, 0.05);
+    padding: 20px;
+    color: gold;
+    font-family: "Times New Roman", serif;
+    box-shadow: 0px 0px 25px rgba(0, 0, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header h3 {
+    font-size: 16px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    background: navy;
+    padding: 20px;
+    color: gold;
+    font-family: "Times New Roman", serif;
+    box-shadow: 0px 0px 20px rgba(255, 255, 0, 0.5);
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animasi teks muncul perlahan */
+.text-animate {
+    opacity: 0;
+    animation: fadeInText 2s ease-in forwards;
+}
+
+/* Animasi teks berkedip */
+@keyframes fadeInText {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes textGlow {
+    0% { text-shadow: 0 0 5px gold, 0 0 10px yellow; }
+    100% { text-shadow: 0 0 15px gold, 0 0 25px yellow; }
+}
+
+@keyframes floatAnimation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Animasi fade-in untuk header */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Video Background */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(50%) contrast(120%);
+}

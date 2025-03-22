@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Universitas Sanata Dharma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <video id="bg-video" autoplay loop muted>
+            <source src="bg2.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <h1>Universitas Sanata Dharma</h1>
+            <img src="https://www.usd.ac.id/logo/usd.png" class="logo">
+            <h3>Oleh Diaz / IF / 23 / 023</h3>
+
+        <!-- Form 1: Data Diri -->
+        <div id="form1">
+            <label>Nama:</label>
+            <input type="text" id="nama" required>
+            
+            <label>Alamat:</label>
+            <input type="text" id="alamat" required>
+            
+            <label>No.Tlp Rumah:</label>
+            <input type="text" id="telpRumah" required>
+            
+            <label>No.Hp:</label>
+            <input type="text" id="hp" required>
+            
+            <label>Email:</label>
+            <input type="email" id="email" required>
+            
+            <label>Kode Pos:</label>
+            <input type="text" id="kodePos" required>
+
+            <button id="btn1">OK</button>
+        </div>
+
+        <!-- Form 2: Jumlah Prodi -->
+        <div id="form2" class="hidden">
+            <label>Jumlah Prodi Pilihan:</label>
+            <input type="number" id="jumlahProdi" min="1" required>
+            <button id="btn2">OK</button>
+        </div>
+
+        <!-- Form 3: Pilihan Prodi -->
+        <div id="form3" class="hidden">
+            <div id="prodiSelection"></div>
+            <button id="btn3">OK</button>
+        </div>
+
+        <!-- Form 4: Konfirmasi -->
+        <div id="form4" class="hidden">
+            <h2>Konfirmasi Data</h2>
+            <div id="confirmData"></div>
+            <button id="lanjutBtn">Lanjut</button>
+        </div>
+
+        <!-- Halaman Harapan -->
+        <div id="harapan-container" class="hidden">
+            <h2>Harapan Saya</h2>
+            <p id="harapanText"></p>
+            <button id="kembaliBtn">Kembali ke Awal</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -4,14 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const form3 = document.getElementById("form3");
     const form4 = document.getElementById("form4");
     const harapanContainer = document.getElementById("harapan-container");
-    const sekolahAsal = document.getElementById("sekolahAsal"); // Tambahkan form 5
-    const sekolah = document.getElementById("sekolah"); // Tambahkan form 5
-    const jurusanSMA = document.getElementById("jurusan"); // Tambahkan form 5
-    const jurusanSMK = document.getElementById("jurusanSMK"); // Tambahkan form 5
-    const tahunMasuk = document.getElementById("tahunMasuk"); // Tambahkan form 5
-    const tahunLulus = document.getElementById("tahunLulus"); // Tambahkan form 5
-    const averageNilai = document.getElementById("averageNilai"); // Tambahkan form 5
-    const btn5 = document.getElementById("btn5"); // Tambahkan form 5
 
     const btn1 = document.getElementById("btn1");
     const btn2 = document.getElementById("btn2");
@@ -34,6 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("prodiSelection").innerHTML = "";
         document.getElementById("confirmData").innerHTML = "";
         document.getElementById("harapanText").innerHTML = "";
+        document.getElementById("errorTlpRumah").textContent = "";
+        document.getElementById("errorHp").textContent = "";
+        document.getElementById("errorKodePos").textContent = "";
+        document.getElementById("errorEmail").textContent = "";
+        document.getElementById("sekolah").value = "";
+        document.getElementById("jurusan").value = "";
+        document.getElementById("tahun").value = "";
+
 
         form1.classList.remove("hidden");
         form2.classList.add("hidden");
@@ -43,16 +43,51 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     //tombol pertama: simpan data diri dan lanjut ke jumlah prodi
-    btn1.addEventListener("click", function () {
+    btn1.addEventListener("click", function (event) {
+        event.preventDefault();
         nama = document.getElementById("nama").value;
         let alamat = document.getElementById("alamat").value;
         let telpRumah = document.getElementById("telpRumah").value;
         let hp = document.getElementById("hp").value;
         let email = document.getElementById("email").value;
         let kodePos = document.getElementById("kodePos").value;
+        let errorTlpRumah = document.getElementById("errorTlpRumah");
+        let errorHp = document.getElementById("errorHp");
+        let errorKodePos = document.getElementById("errorKodePos");
+        let errorEmail = document.getElementById("errorEmail");
 
-        if (!nama || !alamat || !telpRumah || !hp || !email || !kodePos) {
+        let valid = true;
+        errorTlpRumah.textContent = "";
+        errorHp.textContent = "";
+        errorKodePos.textContent = "";
+        errorEmail.textContent = "";
+
+        if (isNaN(telpRumah)){
+            errorTlpRumah.textContent = "Nomor telepon rumah harus berupa angka cok!";
+            valid = false;
+        }
+
+        if (isNaN(hp)){
+            errorHp.textContent = "Nomor HP harus berupa angka cok!";
+            valid = false;
+        }
+
+        if (isNaN(kodePos)){
+            errorKodePos.textContent = "Kode Pos harus berupa angka cok!";
+            valid = false;
+        }
+
+        if (!email.includes("@")){
+            errorEmail.textContent = "Email harus mengandung @ cok!";
+            valid = false;
+        }
+
+        if (!nama || !alamat || !telpRumah || !hp || !email || !kodePos || !sekolah || !jurusan || !tahun) {
             alert("Harap isi semua data sebelum melanjutkan.");
+            return;
+        }
+
+        if (!valid) {
             return;
         }
 
@@ -64,8 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
     btn2.addEventListener("click", function () {
         jumlahProdi = parseInt(document.getElementById("jumlahProdi").value);
 
-        if (!jumlahProdi || jumlahProdi < 1) {
-            alert("Masukkan jumlah prodi yang valid!");
+        if (!jumlahProdi || jumlahProdi < 2 || jumlahProdi > 3) {
+            alert("Masukkan jumlah prodi yang valid! (Minimal 2, maksimal 3)");
             return;
         }
 
@@ -79,10 +114,34 @@ document.addEventListener("DOMContentLoaded", function () {
             let select = document.createElement("select");
             select.id = `prodi${i}`;
             select.innerHTML = `
-                <option value="Informatika">Informatika</option>
-                <option value="Matematika">Matematika</option>
+                <option value="Pendidikan Bahasa Inggris">Pendidikan Bahasa Inggris</option>
+                <option value="Pendidikan Bahasa dan Sastra Indonesia">Pendidikan Bahasa dan Sastra Indonesia</option>
+                <option value="Pendidikan Sejarah">Pendidikan Sejarah</option>
+                <option value="Pendidikan Ekonomi">Pendidikan Ekonomi</option>
+                <option value="Pendidikan Keagamaan Katolik">Pendidikan Keagamaan Katolik</option>
+                <option value="Pendidikan Matematika">Pendidikan Matematika</option>
+                <option value="Pendidikan Fisika">Pendidikan Fisika</option>
+                <option value="Pendidikan Biologi">Pendidikan Biologi</option>
+                <option value="Pendidikan Kimia">Pendidikan Kimia</option>
+                <option value="Bimbingan dan Konseling">Bimbingan dan Konseling</option>
+                <option value="Manajemen">Manajemen</option>
+                <option value="Akuntansi">Akuntansi</option>
+                <option value="Ekonomi">Ekonomi</option>
+                <option value="Hukum">Hukum</option>
                 <option value="Teknik Elektro">Teknik Elektro</option>
                 <option value="Teknik Mesin">Teknik Mesin</option>
+                <option value="Teknik Informatika">Teknik Informatika</option>
+                <option value="Farmasi">Farmasi</option>
+                <option value="Psikologi">Psikologi</option>
+                <option value="Matematika">Matematika</option>
+                <option value="Sastra Inggris">Sastra Inggris</option>
+                <option value="Sastra Indonesia">Sastra Indonesia</option>
+                <option value="Sastra Jepang">Sastra Jepang</option>
+                <option value="Ilmu Religi dan Budaya">Ilmu Religi dan Budaya</option>
+                <option value="Filsafat Keilahian">Filsafat Keilahian</option>
+                <option value="Biologi">Biologi</option>
+                <option value="Kimia">Kimia</option>
+                <option value="Fisika">Fisika</option>
             `;
 
             prodiSelection.appendChild(label);

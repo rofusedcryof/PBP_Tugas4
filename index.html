@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <video id="bg-video" autoplay loop muted>
-            <source src="bg2.mp4" type="video/mp4">
-        </video>
-        <div class="container">
-            <h1>Universitas Sanata Dharma</h1>
-            <img src="https://www.usd.ac.id/logo/usd.png" class="logo">
-            <h3>Oleh Diaz / IF / 23 / 023</h3>
+    <video id="bg-video" autoplay loop muted>
+        <source src="bg2.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <h1>Universitas Sanata Dharma</h1>
+        <img src="https://www.usd.ac.id/logo/usd.png" class="logo">
+        <h3>Oleh Diaz / IF / 23 / 023</h3>
 
         <!-- Form 1: Data Diri -->
         <div id="form1">
@@ -25,58 +25,30 @@
             
             <label>No.Tlp Rumah:</label>
             <input type="text" id="telpRumah" required>
+            <span id="errorTlpRumah" class="error"></span>
             
             <label>No.Hp:</label>
             <input type="text" id="hp" required>
+            <span id="errorHp" class="error"></span>
             
             <label>Email:</label>
             <input type="email" id="email" required>
+            <span id="errorEmail" class="error"></span>
             
             <label>Kode Pos:</label>
             <input type="text" id="kodePos" required>
+            <span id="errorKodePos" class="error"></span>
 
-            <button id="btn1">OK</button>
-        </div>
-
-        <!-- Form 1.5: Asal Sekolahh -->
-        <div id="sekolahAsal" class="hidden">
             <label>Asal Sekolah:</label>
-            <input type="text" id="asalSekolah" required>
+            <input type=text id="sekolah" required>
 
-            <label>SMA/SMK?</label>
-            <select id="Pilih sekolahmu">
-                <option value="SMA">SMA</option>
-                <option value="SMK">SMK</option>
-            </select>
+            <label>Jurusan:</label>
+            <input type="text" id="jurusan" required>
 
-            <div id="JurusanSMA" class="hidden">
-                <label>Jurusan:</label>
-                <select id="Pilih jurusanmu">
-                    <option value="IPA">IPA</option>
-                    <option value="IPS">IPS</option>
-                </select>
-            </div>
-
-            <div id="JurusanSMK" class="hidden">
-                <label>Jurusan:</label>
-                <input type="text" id="Pilih Jurusanmu" placeholder="Contohnya : Teknik Kendaraan Ringan">
-            </div>
-
-            <div id="TahunMasuk" class="hidden">
-                <label>Tahun Masuk:</label>
-                <input type="number" id="tahunMasuk" min="2010" max="2022">
-            </div>
-
-            <div id="TahunLulus" class="hidden">
-                <label>Tahun Lulus:</label>
-                <input type="number" id="tahunLulus" min="2014" max="2026">
-            </div>
-
-            <div id="averageNilai" class="hidden">
-                <label>Rata-rata Nilai:</label>
-                <input type="number" id="averageNilai" min="75" max="100">
-            </div>
-            <button id="btn5">OK</button>
+            <label>Tahun Lulus:</label>
+            <input type="text" id="tahun" required>
+        
+            <button id="btn1">OK</button>
         </div>
 
         <!-- Form 2: Jumlah Prodi -->

@@ -38,10 +38,51 @@
             <button id="btn1">OK</button>
         </div>
 
+        <!-- Form 1.5: Asal Sekolahh -->
+        <div id="sekolahAsal" class="hidden">
+            <label>Asal Sekolah:</label>
+            <input type="text" id="asalSekolah" required>
+
+            <label>SMA/SMK?</label>
+            <select id="Pilih sekolahmu">
+                <option value="SMA">SMA</option>
+                <option value="SMK">SMK</option>
+            </select>
+
+            <div id="JurusanSMA" class="hidden">
+                <label>Jurusan:</label>
+                <select id="Pilih jurusanmu">
+                    <option value="IPA">IPA</option>
+                    <option value="IPS">IPS</option>
+                </select>
+            </div>
+
+            <div id="JurusanSMK" class="hidden">
+                <label>Jurusan:</label>
+                <input type="text" id="Pilih Jurusanmu" placeholder="Contohnya : Teknik Kendaraan Ringan">
+            </div>
+
+            <div id="TahunMasuk" class="hidden">
+                <label>Tahun Masuk:</label>
+                <input type="number" id="tahunMasuk" min="2010" max="2022">
+            </div>
+
+            <div id="TahunLulus" class="hidden">
+                <label>Tahun Lulus:</label>
+                <input type="number" id="tahunLulus" min="2014" max="2026">
+            </div>
+
+            <div id="averageNilai" class="hidden">
+                <label>Rata-rata Nilai:</label>
+                <input type="number" id="averageNilai" min="75" max="100">
+            </div>
+            <button id="btn5">OK</button>
+        </div>
+
         <!-- Form 2: Jumlah Prodi -->
         <div id="form2" class="hidden">
             <label>Jumlah Prodi Pilihan:</label>
-            <input type="number" id="jumlahProdi" min="1" required>
+            <input type="number" id="jumlahProdi" min="2" max="3" required>
             <button id="btn2">OK</button>
         </div>
 

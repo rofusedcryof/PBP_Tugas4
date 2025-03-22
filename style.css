@@ -96,13 +96,13 @@ header {
     animation: fadeIn 2s ease-out;
 }
 
-/* Animasi teks muncul perlahan */
+/* animasi biar teks muncul perlahan */
 .text-animate {
     opacity: 0;
     animation: fadeInText 2s ease-in forwards;
 }
 
-/* Animasi teks berkedip */
+/* animasi biar teks berkedip */
 @keyframes fadeInText {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -119,13 +119,13 @@ header {
     100% { transform: translateY(0); }
 }
 
-/* Animasi fade-in untuk header */
+/* animasi fade-in untuk header */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-30px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Video Background */
+/* video background */
 #bg-video {
     position: fixed;
     top: 0;

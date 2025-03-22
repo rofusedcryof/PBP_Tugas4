@@ -4,12 +4,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const form3 = document.getElementById("form3");
     const form4 = document.getElementById("form4");
     const harapanContainer = document.getElementById("harapan-container");
+    const sekolahAsal = document.getElementById("sekolahAsal"); // Tambahkan form 5
+    const sekolah = document.getElementById("sekolah"); // Tambahkan form 5
+    const jurusanSMA = document.getElementById("jurusan"); // Tambahkan form 5
+    const jurusanSMK = document.getElementById("jurusanSMK"); // Tambahkan form 5
+    const tahunMasuk = document.getElementById("tahunMasuk"); // Tambahkan form 5
+    const tahunLulus = document.getElementById("tahunLulus"); // Tambahkan form 5
+    const averageNilai = document.getElementById("averageNilai"); // Tambahkan form 5
+    const btn5 = document.getElementById("btn5"); // Tambahkan form 5
 
     const btn1 = document.getElementById("btn1");
     const btn2 = document.getElementById("btn2");
     const btn3 = document.getElementById("btn3");
     const lanjutBtn = document.getElementById("lanjutBtn");
     const kembaliBtn = document.getElementById("kembaliBtn"); // Tambahkan tombol kembali
+
 
     let nama, jumlahProdi, prodiList = [];
 
@@ -114,10 +123,10 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        let pilihanTerakhir = prodiList[prodiList.length - 1];
+        let pilihanUtama = prodiList[0];
 
         document.getElementById("harapanText").innerHTML = `
-            <p>Hallo, nama saya <strong>${nama}</strong>, saya mempunyai sejumlah <strong>${jumlahProdi}</strong> pilihan yaitu <strong>${prodiList.join(", ")}</strong>, dan saya memilih <strong>${pilihanTerakhir}</strong>.</p>
+            <p>Hallo, nama saya <strong>${nama}</strong>, saya mempunyai sejumlah <strong>${jumlahProdi}</strong> pilihan yaitu <strong>${prodiList.join(", ")}</strong>, dan saya memilih <strong>${pilihanUtama}</strong>.</p>
         `;
 
         form4.classList.add("hidden");

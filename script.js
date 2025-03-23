@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
             valid = false;
         }
 
-        if (email.includes("@")){
+        if (!email.includes("@")){
             errorEmail.textContent = "@ nya Jangan Lupa";
             valid = false;
         }

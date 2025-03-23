@@ -84,22 +84,22 @@ document.addEventListener("DOMContentLoaded", function () {
         errorEmail.textContent = "";
 
         if (isNaN(telpRumah)){
-            errorTlpRumah.textContent = "Nomor telepon rumah harus berupa angka cok!";
+            errorTlpRumah.textContent = "Masukkan Angka Jir";
             valid = false;
         }
 
         if (isNaN(hp)){
-            errorHp.textContent = "Nomor HP harus berupa angka cok!";
+            errorHp.textContent = "Masukkan Angka Jir";
             valid = false;
         }
 
         if (isNaN(kodePos)){
-            errorKodePos.textContent = "Kode Pos harus berupa angka cok!";
+            errorKodePos.textContent = "Masukkan Angka Jir";
             valid = false;
         }
 
-        if (!email.includes("@")){
-            errorEmail.textContent = "Email harus mengandung @ cok!";
+        if (email.includes("@")){
+            errorEmail.textContent = "@ nya Jangan Lupa";
             valid = false;
         }
 

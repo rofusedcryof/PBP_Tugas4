@@ -135,6 +135,12 @@ header {
     to { opacity: 1; transform: translateY(0); }
 }
 
+@media screen and (max-width: 600px) {
+    body{
+        background-attachment: scroll;
+    }
+}
+
 /* video background */
 #bg-video {
     position: fixed;

@@ -16,6 +16,9 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    /* <video id="bg-video" autoplay loop muted>
+        <source src="bg2.mp4" type="video/mp4">
+    </video> */
 }
 
 .container {

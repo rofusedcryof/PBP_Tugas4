@@ -14,6 +14,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let nama, jumlahProdi, prodiList = [];
 
+    const rainContainer = document.createElement("div");
+    rainContainer.classList.add("rain-container");
+    document.body.appendChild(rainContainer);
+
+    function createRaindrop() {
+        const drop = document.createElement("div");
+        drop.classList.add("rain-drop");
+        drop.style.left = `${Math.random() * 300}vw`;
+        drop.style.animationDuration = `${Math.random() * 1.5 + 0.5}s`;
+        drop.style.animationDelay = `${Math.random()}s`;
+        rainContainer.appendChild(drop);
+
+        setTimeout(() => {
+            drop.remove();
+        }, 2000);
+    }
+
+    setInterval(createRaindrop, 50); // Mempercepat hujan (sebelumnya 100ms, sekarang 50ms);
+
+    setInterval(createRaindrop, 100);
+
     //reset semua form
     function resetForm() {
         document.getElementById("nama").value = "";

@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const btn2 = document.getElementById("btn2");
     const btn3 = document.getElementById("btn3");
     const lanjutBtn = document.getElementById("lanjutBtn");
-    const kembaliBtn = document.getElementById("kembaliBtn"); // Tambahkan tombol kembali
+    const kembaliBtn = document.getElementById("kembaliBtn"); //tambahkan tombol kembali
 
 
     let nama, jumlahProdi, prodiList = [];
@@ -63,22 +63,22 @@ document.addEventListener("DOMContentLoaded", function () {
         errorEmail.textContent = "";
 
         if (isNaN(telpRumah)){
-            errorTlpRumah.textContent = "Nomor telepon rumah harus berupa angka cok!";
+            errorTlpRumah.textContent = "Nomor telepon (angka ya pren)";
             valid = false;
         }
 
         if (isNaN(hp)){
-            errorHp.textContent = "Nomor HP harus berupa angka cok!";
+            errorHp.textContent = "Nomor HP harus berupa (angka ya pren)";
             valid = false;
         }
 
         if (isNaN(kodePos)){
-            errorKodePos.textContent = "Kode Pos harus berupa angka cok!";
+            errorKodePos.textContent = "Kode Pos harus (angka ya pren)";
             valid = false;
         }
 
         if (!email.includes("@")){
-            errorEmail.textContent = "Email harus mengandung @ cok!";
+            errorEmail.textContent = "Email harus (@ ya pren)";
             valid = false;
         }
 

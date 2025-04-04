@@ -23,6 +23,18 @@ body {
     </video> */
 }
 
+.navbar-brand{
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link{
+    color: rgb(255, 0, 0) !important;
+}
+
+.navbar-nav .nav-link.active {
+    text-decoration: underline;
+}
+
 .container {
     width: 350px;
     margin: 50px auto;

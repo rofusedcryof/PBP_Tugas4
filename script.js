@@ -11,6 +11,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const lanjutBtn = document.getElementById("lanjutBtn");
     const kembaliBtn = document.getElementById("kembaliBtn"); // Tambahkan tombol kembali
 
+    form1.addEventListener('submit', function(event){
+        if (!form1.checkValidity()){
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        form1.classList.add('was-validated');
+        form2.classList.add('was-validated');
+        form3.classList.add('was-validated');
+        form4.classList.add('was-validated');
+    });
+
 
     let nama, jumlahProdi, prodiList = [];
 
